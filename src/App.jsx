@@ -3,13 +3,12 @@ import CalculatorInput from "./components/CalculatorInput";
 import CalculatorDelButton from "./components/CalculatorDelButton";
 import CalculatorNumButton from "./components/CalculatorNumButton";
 import CalculatorEnterButton from "./components/CalculatorEnterButton";
+import CalculatorOperatorButton from "./components/CalculatorOperatorButton";
 
 const App = () => {
   const [result, setResult] = useState("0");
   const [temp, setTemp] = useState(0);
-
-  useEffect(() => console.log(result), [result]);
-  useEffect(() => console.log(temp), [temp]);
+  const [operator, setOperator] = useState();
 
   return (
     <main className="bg-pink-200 min-h-screen flex justify-center items-center">
@@ -34,7 +33,13 @@ const App = () => {
             setResult={setResult}
             number={3}
           />
-          <button className="button-style bg-pink-500">+</button>
+          <CalculatorOperatorButton
+            inputOperator={"+"}
+            setOperator={setOperator}
+            result={result}
+            setResult={setResult}
+            setTemp={setTemp}
+          />
           <CalculatorNumButton
             result={result}
             setResult={setResult}
@@ -50,7 +55,13 @@ const App = () => {
             setResult={setResult}
             number={6}
           />
-          <button className="button-style bg-blue-400">-</button>
+          <CalculatorOperatorButton
+            inputOperator={"-"}
+            setOperator={setOperator}
+            result={result}
+            setResult={setResult}
+            setTemp={setTemp}
+          />
           <CalculatorNumButton
             result={result}
             setResult={setResult}
@@ -66,12 +77,19 @@ const App = () => {
             setResult={setResult}
             number={9}
           />
-          <button className="button-style bg-red-400">×</button>
+          <CalculatorOperatorButton
+            inputOperator={"*"}
+            setOperator={setOperator}
+            result={result}
+            setResult={setResult}
+            setTemp={setTemp}
+          />
           <CalculatorEnterButton
             result={result}
             setResult={setResult}
             temp={temp}
             setTemp={setTemp}
+            operator={operator}
           />
           <CalculatorNumButton
             result={result}
@@ -79,7 +97,13 @@ const App = () => {
             number={0}
           />
           <CalculatorDelButton result={result} setResult={setResult} />
-          <button className="button-style bg-cyan-400">÷</button>
+          <CalculatorOperatorButton
+            inputOperator={"/"}
+            setOperator={setOperator}
+            result={result}
+            setResult={setResult}
+            setTemp={setTemp}
+          />
         </div>
       </form>
     </main>
