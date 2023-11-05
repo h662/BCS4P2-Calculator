@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import CalculatorInput from "./components/CalculatorInput";
 import CalculatorDelButton from "./components/CalculatorDelButton";
 import CalculatorNumButton from "./components/CalculatorNumButton";
