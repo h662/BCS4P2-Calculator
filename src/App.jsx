@@ -39,6 +39,7 @@ const App = () => {
             result={result}
             setResult={setResult}
             setTemp={setTemp}
+            color="bg-pink-500"
           />
           <CalculatorNumButton
             result={result}
@@ -61,6 +62,7 @@ const App = () => {
             result={result}
             setResult={setResult}
             setTemp={setTemp}
+            color="bg-blue-500"
           />
           <CalculatorNumButton
             result={result}
@@ -83,6 +85,7 @@ const App = () => {
             result={result}
             setResult={setResult}
             setTemp={setTemp}
+            color="bg-red-400"
           />
           <CalculatorEnterButton
             result={result}
@@ -103,6 +106,7 @@ const App = () => {
             result={result}
             setResult={setResult}
             setTemp={setTemp}
+            color="bg-cyan-500"
           />
         </div>
       </form>

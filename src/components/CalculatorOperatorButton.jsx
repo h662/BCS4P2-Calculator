@@ -4,6 +4,7 @@ const CalculatorOperatorButton = ({
   result,
   setResult,
   setTemp,
+  color,
 }) => {
   const onClickOperator = () => {
     if (isNaN(result) || result === 0) {
@@ -17,7 +18,7 @@ const CalculatorOperatorButton = ({
   };
 
   return (
-    <button className="button-style bg-red-600" onClick={onClickOperator}>
+    <button className={`button-style ${color}`} onClick={onClickOperator}>
       {inputOperator}
     </button>
   );
