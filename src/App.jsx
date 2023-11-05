@@ -1,10 +1,15 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import CalculatorInput from "./components/CalculatorInput";
 import CalculatorDelButton from "./components/CalculatorDelButton";
 import CalculatorNumButton from "./components/CalculatorNumButton";
+import CalculatorEnterButton from "./components/CalculatorEnterButton";
 
 const App = () => {
   const [result, setResult] = useState("0");
+  const [temp, setTemp] = useState(0);
+
+  useEffect(() => console.log(result), [result]);
+  useEffect(() => console.log(temp), [temp]);
 
   return (
     <main className="bg-pink-200 min-h-screen flex justify-center items-center">
@@ -62,7 +67,12 @@ const App = () => {
             number={9}
           />
           <button className="button-style bg-red-400">×</button>
-          <button className="button-style bg-blue-600">Enter</button>
+          <CalculatorEnterButton
+            result={result}
+            setResult={setResult}
+            temp={temp}
+            setTemp={setTemp}
+          />
           <CalculatorNumButton
             result={result}
             setResult={setResult}

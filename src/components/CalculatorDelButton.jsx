@@ -8,7 +8,7 @@ const CalculatorDelButton = ({ result, setResult }) => {
   };
 
   return (
-    <button className="button-style" onClick={onClickDel}>
+    <button className="button-style bg-red-600" onClick={onClickDel}>
       Del
     </button>
   );
