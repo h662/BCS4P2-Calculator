@@ -1,5 +1,6 @@
 import { useState } from "react";
 import CalculatorInput from "./components/CalculatorInput";
+import CalculatorDelButton from "./components/CalculatorDelButton";
 import CalculatorNumButton from "./components/CalculatorNumButton";
 
 const App = () => {
@@ -67,7 +68,7 @@ const App = () => {
             setResult={setResult}
             number={0}
           />
-          <button className="button-style bg-red-600">Del</button>
+          <CalculatorDelButton result={result} setResult={setResult} />
           <button className="button-style bg-cyan-400">÷</button>
         </div>
       </form>
